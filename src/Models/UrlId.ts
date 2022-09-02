@@ -1,4 +1,5 @@
-import {UrlIdTooShortError} from "../UrlIdTooShortError";
+import {UrlIdTooShortError} from "./errors/UrlIdTooShortError";
+
 
 export class UrlId {
     constructor(private urlId: string) {

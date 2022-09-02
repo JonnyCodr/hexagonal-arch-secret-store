@@ -1,5 +1,5 @@
 import {UrlId} from "../src/Models/UrlId";
-import {UrlIdTooShortError} from "../src/UrlIdTooShortError";
+import {UrlIdTooShortError} from "../src/Models/errors/UrlIdTooShortError";
 
 describe('URL ID test', function () {
     it('should create and instance of UrlId', function () {

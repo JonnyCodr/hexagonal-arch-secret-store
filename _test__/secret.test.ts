@@ -1,5 +1,5 @@
 import {Secret} from "../src/Models/Secret";
-import {SecretTooShortError} from "../src/SecretTooShortError";
+import {SecretTooShortError} from "../src/Models/errors/SecretTooShortError";
 
 describe('secret test', function () {
     it('should create and instance of Secret', function () {
