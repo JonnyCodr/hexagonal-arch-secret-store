@@ -1,5 +1,3 @@
-import {Secret} from "../src/Models/Secret";
-import {SecretTooShortError} from "../src/SecretTooShortError";
 import {UrlId} from "../src/Models/UrlId";
 import {UrlIdTooShortError} from "../src/UrlIdTooShortError";
 
