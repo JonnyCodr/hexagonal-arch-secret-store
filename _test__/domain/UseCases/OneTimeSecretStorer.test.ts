@@ -7,7 +7,7 @@ describe('OneTimeSecretStorer', function () {
     it('should store a secret and return urlId', async function () {
 
         const secretRepo: SecretRepository = {
-            getSecretByUtlId: jest.fn().mockResolvedValue(new Secret('123zwie')),
+            getSecretByUtlId: jest.fn(),
             removeSecretByUtlId: jest.fn(),
             storeUrlIdAndSecret: jest.fn()
         }
@@ -20,8 +20,9 @@ describe('OneTimeSecretStorer', function () {
 
         const secret = new Secret('123zwie');
 
-        await expect(oneTimeSecretStorer.storeSecret(secret)).toEqual(new UrlId('123456sdfvojenrvq'));
+        expect(await oneTimeSecretStorer.storeSecret(secret)).toEqual(new UrlId('123456sdfvojenrvq'));
         expect(secretRepo.storeUrlIdAndSecret).toHaveBeenCalledTimes(1);
         expect(secretRepo.storeUrlIdAndSecret).toHaveBeenCalledWith(new UrlId('123456sdfvojenrvq'), secret);
+        expect(tokenGenerator.generateToken).toHaveBeenCalledTimes(1);
   });
 });
