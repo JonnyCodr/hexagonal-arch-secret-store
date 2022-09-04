@@ -7,4 +7,8 @@ export class Secret {
             throw new SecretTooShortError();
         }
     }
+
+    toString(): string {
+        return this.secret;
+    }
 }

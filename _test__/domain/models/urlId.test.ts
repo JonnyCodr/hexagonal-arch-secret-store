@@ -9,4 +9,9 @@ describe('URL ID test', function () {
     it('should throw an error if the url id is too short', function () {
         expect(() => new UrlId('12')).toThrow(UrlIdTooShortError);
     });
+
+    it('should return a string representation on the toString method', function () {
+
+        expect(new UrlId('lskdjfnvrovnaeori38welrkfn').toString()).toBe('lskdjfnvrovnaeori38welrkfn');
+    });
 });

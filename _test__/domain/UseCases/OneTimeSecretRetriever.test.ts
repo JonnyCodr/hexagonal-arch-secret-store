@@ -9,8 +9,8 @@ describe('OneTimeSecretRetriever', function () {
     it('should retrieve the secret one time', async function () {
 
         const secretRepo: SecretRepository = {
-            getSecretByUtlId: jest.fn().mockResolvedValue(new Secret('123zwie')),
-            removeSecretByUtlId: jest.fn(),
+            getSecretByUrlId: jest.fn().mockResolvedValue(new Secret('123zwie')),
+            removeSecretByUrlId: jest.fn(),
             storeUrlIdAndSecret: jest.fn()
         }
 
@@ -18,10 +18,10 @@ describe('OneTimeSecretRetriever', function () {
         const urlId = new UrlId('123456sdfvojenrvq');
 
         await expect(oneTimeSecretRetriever.retrieveSecret(urlId)).resolves.toEqual(new Secret('123zwie'));
-        expect(secretRepo.getSecretByUtlId).toHaveBeenCalledTimes(1);
-        expect(secretRepo.getSecretByUtlId).toHaveBeenCalledWith(urlId);
-        expect(secretRepo.removeSecretByUtlId).toHaveBeenCalledTimes(1);
-        expect(secretRepo.removeSecretByUtlId).toHaveBeenCalledWith(urlId);
+        expect(secretRepo.getSecretByUrlId).toHaveBeenCalledTimes(1);
+        expect(secretRepo.getSecretByUrlId).toHaveBeenCalledWith(urlId);
+        expect(secretRepo.removeSecretByUrlId).toHaveBeenCalledTimes(1);
+        expect(secretRepo.removeSecretByUrlId).toHaveBeenCalledWith(urlId);
 
   });
 });

@@ -9,4 +9,8 @@ export class UrlId {
             throw new UrlIdTooShortError();
         }
     }
+
+    toString(): string {
+        return this.urlId;
+    }
 }

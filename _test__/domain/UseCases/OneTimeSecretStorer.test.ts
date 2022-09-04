@@ -7,8 +7,8 @@ describe('OneTimeSecretStorer', function () {
     it('should store a secret and return urlId', async function () {
 
         const secretRepo: SecretRepository = {
-            getSecretByUtlId: jest.fn(),
-            removeSecretByUtlId: jest.fn(),
+            getSecretByUrlId: jest.fn(),
+            removeSecretByUrlId: jest.fn(),
             storeUrlIdAndSecret: jest.fn()
         }
 

@@ -23,8 +23,8 @@ export class OneTimeSecretRetriever implements SecretRetriever {
      * @see {@link
      */
     async retrieveSecret(urlId: UrlId): Promise<Secret> {
-        const secret = await this.secretRepo.getSecretByUtlId(urlId)
-        await this.secretRepo.removeSecretByUtlId(urlId)
+        const secret = await this.secretRepo.getSecretByUrlId(urlId)
+        await this.secretRepo.removeSecretByUrlId(urlId)
         return secret
     }
 }
