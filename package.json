@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "npx ts-node src/server.ts",
     "test:cov": "jest --coverage",
     "test": "jest --watch",
     "mongo": "docker run --name my-mongo-server -p 27017:27017 -d mongo",

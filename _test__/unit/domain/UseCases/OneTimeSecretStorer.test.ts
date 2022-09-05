@@ -1,7 +1,8 @@
-import {Secret} from "../../../src/domain/Models/Secret";
-import {OneTimeSecretStorer} from "../../../src/domain/useCases/OneTimeSecretStorer";
-import {UrlId} from "../../../src/domain/Models/UrlId";
-import {SecretRepository} from "../../../src/domain/ports/out/SecretRepository";
+import {SecretRepository} from "../../../../src/domain/ports/out/SecretRepository";
+import {OneTimeSecretStorer} from "../../../../src/domain/useCases/OneTimeSecretStorer";
+import {Secret} from "../../../../src/domain/Models/Secret";
+import {UrlId} from "../../../../src/domain/Models/UrlId";
+
 
 describe('OneTimeSecretStorer', function () {
     it('should store a secret and return urlId', async function () {

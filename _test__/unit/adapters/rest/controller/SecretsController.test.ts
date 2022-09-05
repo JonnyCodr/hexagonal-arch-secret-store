@@ -1,9 +1,9 @@
-import {SecretStorer} from "../../../../src/domain/ports/in/SecretStorer";
 import {NextFunction, request, Request, response, Response} from "express";
-import {ValidationError} from "../../../../src/adapters/rest/controller/errors/ValidationError";
-import {SecretsController} from "../../../../src/adapters/rest/controller/SecretsController";
+import {SecretStorer} from "../../../../../src/domain/ports/in/SecretStorer";
+import {SecretsController} from "../../../../../src/adapters/rest/controller/SecretsController";
+import {ValidationError} from "../../../../../src/adapters/rest/controller/errors/ValidationError";
 
-describe('Secrets test', function () {
+describe('Secrets controller test', function () {
 
     it('should throw validation error if the body of the request is not provided', function () {
 

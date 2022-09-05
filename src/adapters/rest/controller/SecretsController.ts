@@ -11,16 +11,18 @@ export class SecretsController {
     createSecret = async (req: Request, res: Response, next: NextFunction) => {
         try {
             this.validateRequest(req);
-            const secret = new Secret(req.body.secret);
-            const urlId = await this.secretStorer.storeSecret(secret);
+
+            const urlId = await this.secretStorer.storeSecret(new Secret(req.body.secret));
+
             res.status(201).json({urlId: urlId});
-        } catch (err) {
-            next(err);
+        } catch (e) {
+            next(e);
         }
     }
 
     private validateRequest(req: Request) {
-        if(!req.body || !req.body?.secret || typeof req.body?.secret !== 'string') (new ValidationError('Request body not valid'));
+        if(!req.body || !req.body?.secret || typeof req.body.secret !== 'string') {
+            throw new ValidationError('Request body not valid');
+        }
     }
-
 }

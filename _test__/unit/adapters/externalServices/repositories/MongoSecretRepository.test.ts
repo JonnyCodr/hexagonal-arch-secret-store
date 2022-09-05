@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
-import {MongoSecretRepository} from "../../../../src/adapters/externalServices/repositories/MongoSecretRepository";
-import {Secret} from "../../../../src/domain/Models/Secret";
-import {UrlId} from "../../../../src/domain/Models/UrlId";
-import {SecretModel} from "../../../../src/adapters/externalServices/repositories/SecretModel";
-import {SecretNotFoundInRepositoryError} from "../../../../src/domain/Models/errors/SecretNotFoundInRepositoryError";
+import {MongoSecretRepository} from "../../../../../src/adapters/externalServices/repositories/MongoSecretRepository";
+import {SecretModel} from "../../../../../src/adapters/externalServices/repositories/SecretModel";
+import {UrlId} from "../../../../../src/domain/Models/UrlId";
+import {Secret} from "../../../../../src/domain/Models/Secret";
+import {SecretNotFoundInRepositoryError} from "../../../../../src/domain/Models/errors/SecretNotFoundInRepositoryError";
+
 
 describe('MongoSecretRepository test', function () {
     it('should connect to the database', async function () {

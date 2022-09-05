@@ -1,8 +1,7 @@
-
-import {Secret} from "../../../src/domain/Models/Secret";
-import {OneTimeSecretRetriever} from "../../../src/domain/useCases/OneTimeSecretRetriever";
-import {UrlId} from "../../../src/domain/Models/UrlId";
-import {SecretRepository} from "../../../src/domain/ports/out/SecretRepository";
+import {SecretRepository} from "../../../../src/domain/ports/out/SecretRepository";
+import {Secret} from "../../../../src/domain/Models/Secret";
+import {OneTimeSecretRetriever} from "../../../../src/domain/useCases/OneTimeSecretRetriever";
+import {UrlId} from "../../../../src/domain/Models/UrlId";
 
 
 describe('OneTimeSecretRetriever', function () {

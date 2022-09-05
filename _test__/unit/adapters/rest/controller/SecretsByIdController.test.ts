@@ -1,10 +1,10 @@
-import {ValidationError} from "../../../../src/adapters/rest/controller/errors/ValidationError";
 import {NextFunction, request, Request, response, Response} from "express";
+import {SecretRetriever} from "../../../../../src/domain/ports/in/SecretRetriever";
+import {SecretsByIdController} from "../../../../../src/adapters/rest/controller/SecretsByIdController";
+import {ValidationError} from "../../../../../src/adapters/rest/controller/errors/ValidationError";
+import {SecretNotFoundInRepositoryError} from "../../../../../src/domain/Models/errors/SecretNotFoundInRepositoryError";
+import {Secret} from "../../../../../src/domain/Models/Secret";
 
-import { SecretsByIdController } from '../../../../src/adapters/rest/controller/SecretsByIdController';
-import {SecretNotFoundInRepositoryError} from "../../../../src/domain/Models/errors/SecretNotFoundInRepositoryError";
-import {SecretRetriever} from "../../../../src/domain/ports/in/SecretRetriever";
-import {Secret} from "../../../../src/domain/Models/Secret";
 
 describe('Secrets by id test', function () {
 

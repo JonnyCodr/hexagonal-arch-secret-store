@@ -1,5 +1,5 @@
-import {Secret} from "../../../src/domain/Models/Secret";
-import {SecretTooShortError} from "../../../src/domain/Models/errors/SecretTooShortError";
+import {Secret} from "../../../../src/domain/Models/Secret";
+import {SecretTooShortError} from "../../../../src/domain/Models/errors/SecretTooShortError";
 
 
 describe('secret test', function () {

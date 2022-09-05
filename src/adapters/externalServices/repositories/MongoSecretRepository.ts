@@ -34,7 +34,6 @@ export class MongoSecretRepository implements SecretRepository {
     private async setConnection() {
         if (mongoose.connection?.readyState === 0) {
             await mongoose.connect('mongodb://localhost:27017/onetimesecret')
-            console.log('mongoose.connection.readyState:', mongoose.connection.readyState);
         }
 
     }
