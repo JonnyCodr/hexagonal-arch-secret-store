@@ -3,11 +3,24 @@ import {ValidationError} from "./errors/ValidationError";
 import {SecretRetriever} from "../../../domain/ports/in/SecretRetriever";
 import {UrlId} from "../../../domain/Models/UrlId";
 
-
+/**
+ * @class SecretsByIdController
+ * @description This class is used to handle the requests for the secrets by id
+ * @version 1.0.0
+ */
 export class SecretsByIdController {
 
     constructor(private secretRetriever: SecretRetriever) {}
 
+    /**
+     *
+     * @param {Request} req
+     * @param {Response} resp
+     * @param {NextFunction} next
+     * @returns {Promise<Response>} response
+     * @description This function is used to retrieve a secret by id
+     * @version 1.0.0
+     */
     retrieveSecret = async (req: Request, resp: Response, next: NextFunction) => {
         try {
             this.validateRequest(req);

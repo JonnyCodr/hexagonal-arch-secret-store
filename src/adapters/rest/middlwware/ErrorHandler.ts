@@ -4,6 +4,18 @@ import {UrlIdTooShortError} from "../../../domain/Models/errors/UrlIdTooShortErr
 import {SecretTooShortError} from "../../../domain/Models/errors/SecretTooShortError";
 import {SecretNotFoundInRepositoryError} from "../../../domain/Models/errors/SecretNotFoundInRepositoryError";
 
+/**
+ *
+ * @param {Error} error
+ * @param {Request} req
+ * @param {Response} res
+ * @param {NextFunction} next
+ * @returns {Response} response
+ * @constructor
+ * @description This function is used to handle errors in the application
+ * @see https://expressjs.com/en/guide/error-handling.html
+ * @version 1.0.0
+ */
 export function errorHandler(error: Error, req: Request, res: Response, next: NextFunction) {
 
     if (error instanceof ValidationError || error instanceof UrlIdTooShortError || error instanceof SecretTooShortError) {

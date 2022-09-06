@@ -28,3 +28,5 @@ routeList.push(SecretByIdRoute);
 const application: Application = new Application(routeList);
 
 application.startServer(3000);
+
+export default application;
